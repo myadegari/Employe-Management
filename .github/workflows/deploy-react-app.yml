@@ -8,8 +8,6 @@ on:
 jobs:
   deploy-react-to-gh-pages:
     runs-on: ubuntu-latest
-    env:
-      EXAMPLE: example # environment variable
 
     steps:
       # checkout the repository content to github runner
@@ -20,7 +18,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: "18.16.1"
+          node-version: "21.5.0"
 
       # cache the dependencies to speed up the build
       - name: Cache dependencies
